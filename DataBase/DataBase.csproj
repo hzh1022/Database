@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Form21old.cs" />
+    <Compile Remove="Form21old.Designer.cs" />
+    <Compile Remove="Form2old.cs" />
+    <Compile Remove="Form2old.Designer.cs" />
+    <Compile Remove="Form31old.cs" />
+    <Compile Remove="Form31old.Designer.cs" />
+    <Compile Remove="Form3old.cs" />
+    <Compile Remove="Form3old.Designer.cs" />
+    <Compile Remove="Form41old.cs" />
+    <Compile Remove="Form41old.Designer.cs" />
+    <Compile Remove="Form4old.cs" />
+    <Compile Remove="Form4old.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Form21old.resx" />
+    <EmbeddedResource Remove="Form2old.resx" />
+    <EmbeddedResource Remove="Form31old.resx" />
+    <EmbeddedResource Remove="Form3old.resx" />
+    <EmbeddedResource Remove="Form41old.resx" />
+    <EmbeddedResource Remove="Form4old.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
